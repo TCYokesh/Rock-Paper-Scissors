@@ -16,7 +16,7 @@ body {
     background-size: cover;
 }
 
-/* ===== TITLE ===== */
+/* TITLE */
 .title {
     text-align: center;
     margin-top: 30px;
@@ -25,14 +25,14 @@ body {
     color: white;
 }
 
-/* ===== TOP BUTTONS (DESKTOP) ===== */
+/* TOP BUTTONS DESKTOP */
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* ===== BUTTON STYLE ===== */
+/* BUTTON STYLE */
 button {
     height: 200px;
     width: 200px;
@@ -61,13 +61,12 @@ button:hover {
         0 0 50px rgba(255, 69, 0, 0.3);
 }
 
-/* ===== ICON ===== */
 img {
     width: 50px;
     height: 50px;
 }
 
-/* ===== RESULT SECTION ===== */
+/* RESULT SECTION DESKTOP */
 .container2 {
     display: flex;
     justify-content: center;
@@ -92,7 +91,6 @@ img {
     margin: 20px;
 }
 
-/* ===== RESET / AUTO ===== */
 .one {
     margin-left: 100px;
 }
@@ -138,41 +136,44 @@ img {
         justify-self: center;
     }
 
-    /* RESULT */
+    /* 🔥 RESULT + RESET + AUTO IN ONE ROW */
+    .container2 {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        align-items: center;
+        width: 100%;
+        max-width: 320px;
+        margin: 15px auto 0;
+    }
+
+    .one {
+        grid-column: 1;
+        justify-self: start;
+        margin: 0 !important;
+        height: 45px;
+        width: 70px;
+        font-size: 12px;
+    }
+
     .result {
-        order: 1;
-        margin-top: 10px;
+        grid-column: 2;
+        text-align: center;
         height: auto;
     }
 
     .js-one,
     .js-two,
     .js-three {
-        font-size: 18px;
-        margin: 5px;
-    }
-
-    /* RESET + AUTO ALIGN */
-    .container2 {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 10px;
-    }
-
-    .one {
-        align-self: flex-start;
-        margin: 10px 0 0 20px !important;
-        height: 50px;
-        width: 80px;
-        font-size: 14px;
+        font-size: 16px;
+        margin: 4px;
     }
 
     .Auto {
-        align-self: flex-end;
-        margin: 10px 20px 0 0 !important;
-        height: 50px;
-        width: 100px;
-        font-size: 14px;
+        grid-column: 3;
+        justify-self: end;
+        margin: 0 !important;
+        height: 45px;
+        width: 80px;
+        font-size: 12px;
     }
-}
+    }
