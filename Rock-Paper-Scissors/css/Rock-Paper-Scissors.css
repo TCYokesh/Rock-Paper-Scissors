@@ -16,22 +16,23 @@ body {
     background-size: cover;
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    text-align: center;
-}
-
+/* ===== TITLE ===== */
 .title {
+    text-align: center;
     margin-top: 30px;
     font-size: 48px;
     font-weight: bold;
     color: white;
 }
 
+/* ===== TOP BUTTONS (DESKTOP) ===== */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ===== BUTTON STYLE ===== */
 button {
     height: 200px;
     width: 200px;
@@ -41,11 +42,14 @@ button {
     color: white;
     font-weight: bold;
     font-size: 44px;
+
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
+
     box-shadow: 
         0 0 15px rgba(255, 69, 0, 0.2),
         inset 0 0 10px rgba(255, 255, 255, 0.05);
+
     transition: all 0.3s ease;
 }
 
@@ -57,11 +61,18 @@ button:hover {
         0 0 50px rgba(255, 69, 0, 0.3);
 }
 
+/* ===== ICON ===== */
+img {
+    width: 50px;
+    height: 50px;
+}
+
+/* ===== RESULT SECTION ===== */
 .container2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 100px;
+    gap: 80px;
     margin-top: 20px;
 }
 
@@ -81,18 +92,20 @@ button:hover {
     margin: 20px;
 }
 
-.controls {
-    display: flex;
-    justify-content: center;
-    gap: 80px;
-    margin-top: 20px;
+/* ===== RESET / AUTO ===== */
+.one {
+    margin-left: 100px;
+}
+
+.Auto {
+    margin-right: 100px;
 }
 
 .hidden {
     visibility: hidden;
 }
 
-/* MOBILE */
+/* ================= MOBILE ================= */
 
 @media (max-width: 768px) {
 
@@ -101,52 +114,65 @@ button:hover {
     }
 
     .title {
-        font-size: 32px;
+        font-size: 28px;
         margin-top: 10px;
     }
 
-    .container2 {
+    /* TRIANGLE BUTTONS */
+    .container {
         display: grid;
-        grid-template-columns: repeat(2, 100px);
+        grid-template-columns: repeat(2, 80px);
         justify-content: center;
-        gap: 15px;
+        gap: 12px;
         margin-top: 10px;
     }
 
-    .container2 button {
-        height: 100px;
-        width: 100px;
-        font-size: 24px;
+    .container button {
+        height: 80px;
+        width: 80px;
         margin: 0;
     }
 
-    .container2 button:nth-child(3) {
+    .container button:nth-child(3) {
         grid-column: 1 / span 2;
         justify-self: center;
+    }
+
+    /* RESULT */
+    .result {
+        order: 1;
+        margin-top: 10px;
+        height: auto;
     }
 
     .js-one,
     .js-two,
     .js-three {
-        font-size: 20px;
-        margin: 10px;
+        font-size: 18px;
+        margin: 5px;
     }
 
-    .result {
-        height: auto;
+    /* RESET + AUTO ALIGN */
+    .container2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
     }
 
-    .controls {
-        justify-content: space-between;
-        width: 100%;
-        max-width: 280px;
-        margin: 20px auto 0;
-    }
-
-    .controls button {
-        height: 70px;
-        width: 70px;
+    .one {
+        align-self: flex-start;
+        margin: 10px 0 0 20px !important;
+        height: 50px;
+        width: 80px;
         font-size: 14px;
-        margin: 0;
+    }
+
+    .Auto {
+        align-self: flex-end;
+        margin: 10px 20px 0 0 !important;
+        height: 50px;
+        width: 100px;
+        font-size: 14px;
     }
 }
