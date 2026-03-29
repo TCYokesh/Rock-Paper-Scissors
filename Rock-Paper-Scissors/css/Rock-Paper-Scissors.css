@@ -36,14 +36,11 @@ button {
     color: white;
     font-weight: bold;
     font-size: 44px;
-
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
-
     box-shadow: 
         0 0 15px rgba(255, 69, 0, 0.2),
         inset 0 0 10px rgba(255, 255, 255, 0.05);
-
     transition: all 0.3s ease;
 }
 button:hover {
