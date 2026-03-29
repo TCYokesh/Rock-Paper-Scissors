@@ -3,7 +3,6 @@ html, body {
     margin: 0;
     overflow: hidden;
 }
-
 body {
     background: linear-gradient(
         135deg,
@@ -15,8 +14,6 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
-
-/* TITLE */
 .title {
     text-align: center;
     margin-top: 30px;
@@ -24,15 +21,11 @@ body {
     font-weight: bold;
     color: white;
 }
-
-/* TOP BUTTONS DESKTOP */
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
-/* BUTTON STYLE */
 button {
     height: 200px;
     width: 200px;
@@ -52,7 +45,6 @@ button {
 
     transition: all 0.3s ease;
 }
-
 button:hover {
     border-color: orangered;
     transform: scale(1.1);
@@ -60,13 +52,10 @@ button:hover {
         0 0 25px rgba(255, 69, 0, 0.6),
         0 0 50px rgba(255, 69, 0, 0.3);
 }
-
 img {
     width: 50px;
     height: 50px;
 }
-
-/* RESULT SECTION DESKTOP */
 .container2 {
     display: flex;
     justify-content: center;
@@ -74,7 +63,6 @@ img {
     gap: 80px;
     margin-top: 20px;
 }
-
 .result {
     text-align: center;
     height: 150px;
@@ -82,7 +70,6 @@ img {
     flex-direction: column;
     justify-content: center;
 }
-
 .js-one,
 .js-two,
 .js-three {
@@ -90,33 +77,26 @@ img {
     font-size: 40px;
     margin: 20px;
 }
-
 .one {
     margin-left: 100px;
 }
-
 .Auto {
     margin-right: 100px;
 }
-
 .hidden {
     visibility: hidden;
 }
 
-/* ================= MOBILE ================= */
 
 @media (max-width: 768px) {
 
     html, body {
         overflow: auto;
     }
-
     .title {
         font-size: 28px;
         margin-top: 10px;
     }
-
-    /* TRIANGLE BUTTONS */
     .container {
         display: grid;
         grid-template-columns: repeat(2, 80px);
@@ -124,56 +104,45 @@ img {
         gap: 12px;
         margin-top: 10px;
     }
-
     .container button {
         height: 80px;
         width: 80px;
         margin: 0;
     }
-
     .container button:nth-child(3) {
         grid-column: 1 / span 2;
         justify-self: center;
     }
-
-    /* 🔥 RESULT + RESET + AUTO IN ONE ROW */
     .container2 {
-        display: grid;
-        grid-template-columns: 1fr 2fr 1fr;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         align-items: center;
         width: 100%;
         max-width: 320px;
-        margin: 15px auto 0;
+        min-height: 55vh;
+        margin: 10px auto 0;
+        gap: 12px;
     }
-
-    .one {
-        grid-column: 1;
-        justify-self: start;
-        margin: 0 !important;
-        height: 45px;
-        width: 70px;
-        font-size: 12px;
-    }
-
     .result {
-        grid-column: 2;
         text-align: center;
-        height: auto;
     }
-
     .js-one,
     .js-two,
     .js-three {
-        font-size: 16px;
+        font-size: 18px;
         margin: 4px;
     }
-
-    .Auto {
-        grid-column: 3;
-        justify-self: end;
-        margin: 0 !important;
-        height: 45px;
+    .one {
+        height: 80px;
         width: 80px;
         font-size: 12px;
+        margin: 0 !important;
     }
-        }
+    .Auto {
+        height: 80px;
+        width: 90px;
+        font-size: 12px;
+        margin: 0 !important;
+    }
+}
