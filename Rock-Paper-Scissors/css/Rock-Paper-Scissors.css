@@ -16,11 +16,12 @@ body {
 }
 .title {
     text-align: center;
-    margin-top: 36px;
+    margin-top: 10px;
     font-size: 48px;
     font-weight: bold;
     color: white;
     margin-bottom: 36px;
+    cursor: pointer;
 }
 .container {
     display: flex;
@@ -36,11 +37,15 @@ button {
     color: white;
     font-weight: bold;
     font-size: 44px;
+    cursor: pointer;
+
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
+
     box-shadow: 
         0 0 15px rgba(255, 69, 0, 0.2),
         inset 0 0 10px rgba(255, 255, 255, 0.05);
+
     transition: all 0.3s ease;
 }
 button:hover {
@@ -143,4 +148,75 @@ img {
         font-size: 12px;
         margin: 0 !important;
     }
+}
+.sideMenu {
+    position: fixed;
+    top: 72px;
+    left: -270px;
+    width: 270px;
+    height: 100vh;
+    background-color: black;
+    color: white;
+    display: block;
+    flex-direction: column;  
+    text-align: center;
+    transition: left 0.3s ease-in;
+    z-index: 2;
+}
+.sideMenu .anker a {
+    margin-top: 35px;
+    font-size: 20px;
+    text-decoration: none;
+    display: block;
+    color: white;
+    width: 100%;
+    text-align: center;
+    transition: all 0.2s ease;
+    justify-content: center;
+}
+.anker{
+    padding-top: 20px;
+    justify-content: center;
+}
+.sideMenu .anker a:hover {
+    color: red;
+}
+.sideMenu.active{
+    left: 0;
+}
+.new{
+    transition: filter 0.3s ease-in-out;
+}
+.new.blur{
+    filter:blur(5px);
+}
+h4{
+    margin-top: 420px;
+}
+h4 a{
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+h4,a:hover{
+    color: red;
+    transform: scale(1.1);
+    transition: all 0.2s ease;
+}
+.navbar{
+    height: 35px;
+    background-color: black;
+    color: white;
+    font-size: 30px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.bar{
+   height: 5px;
+    width: 35px;
+    background-color: white;
+    display: block;
+    margin: 5px;
+    cursor: pointer;
 }
