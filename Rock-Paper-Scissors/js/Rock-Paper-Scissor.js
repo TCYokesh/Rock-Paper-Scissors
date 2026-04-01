@@ -28,37 +28,37 @@ function autoplay(){
     }
 }
 document.querySelector('.js-rock').addEventListener('click',() => {
-    playGame('Rock');
+    playGame('rock');
 });
 
 document.querySelector('.js-paper').addEventListener('click',() => {
-    playGame('Paper');
+    playGame('paper');
 });
 
 document.querySelector('.js-scissor').addEventListener('click',() => {
-    playGame('Scissor');
+    playGame('scissor');
 });
 
 document.body.addEventListener('keydown',(event) => {
     if (event.key === 'r'){
-        playGame('Rock');
+        playGame('rock');
     }
     else if (event.key === 'p'){
-        playGame('Paper');
+        playGame('paper');
     }
     else if (event.key === 's'){
-        playGame('Scissor');
+        playGame('scissor');
     }
 });
 
 function playGame(PlayerMove){
     let result = '';
     const computerMove = compMove();
-    if (PlayerMove === 'Rock'){
-        if (computerMove === 'Rock') {
+    if (PlayerMove === 'rock'){
+        if (computerMove === 'rock') {
             result = 'Tie';
         }
-        else if (computerMove === 'Paper') {
+        else if (computerMove === 'paper') {
             result = 'You Lost';
         }
         else {
@@ -67,11 +67,11 @@ function playGame(PlayerMove){
         document.querySelector('.js-one').innerHTML = result;
     }
 
-    else if (PlayerMove === 'Paper') {
-        if (computerMove === 'Paper') {
+    else if (PlayerMove === 'paper') {
+        if (computerMove === 'paper') {
             result = 'Tie';
         }
-        else if (computerMove === 'Rock') {
+        else if (computerMove === 'rock') {
             result = 'You Win';
         }
         else {
@@ -80,14 +80,14 @@ function playGame(PlayerMove){
         document.querySelector('.js-one').innerHTML = result;
     }
 
-    else if(PlayerMove === 'Scissor') {
-        if (computerMove === 'Scissor') {
+    else if(PlayerMove === 'scissor') {
+        if (computerMove === 'scissor') {
             result = 'Tie';
         }
-        else if (computerMove === 'Rock') {
+        else if (computerMove === 'rock') {
             result = 'You Lost';
         }
-        else if (computerMove === 'Paper'){
+        else if (computerMove === 'paper'){
             result = 'You Win';
         }
         document.querySelector('.js-one').innerHTML = result;
