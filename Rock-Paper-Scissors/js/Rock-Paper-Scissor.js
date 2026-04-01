@@ -138,13 +138,13 @@ function compMove(){
     const random = Math.random();
 
     if (random >= 0 && random < 1/3){
-        computerMove = 'Rock';
+        computerMove = 'rock';
     }
     else if (random >= 1/3 && random < 2/3){
-        computerMove = 'Paper';
+        computerMove = 'paper';
     }
     else {
-        computerMove = 'Scissor';
+        computerMove = 'scissor';
     }
     return computerMove;
 }
